@@ -5,5 +5,5 @@ int main(){
 	//khoi tao gia tri bat ky
 	a=10;
 	//In ra man hinh
-	printf("Gia tri cua bien a la: %d\n",a);
+	printf("Gia tri cua so nguyen a la: %d\n",a);
 }
