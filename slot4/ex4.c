@@ -8,8 +8,12 @@ int main(){
 	fflush(stdin);
 	scanf("%c",&pt);
 	float kq =(float) a/b;
-	if (b==0)
-	  printf("Khong the chia cho 0");
-	else 
+	if (pt=='/'){
+  	 if (b==0)
+	   printf("Khong the chia cho 0");
+	 else 
 	  printf("Ket qua : %d%c%d = %.2f\n",a,pt,b,kq);
+}
+    else 
+    printf("khong phai phep chia");
 }
