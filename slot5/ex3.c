@@ -9,5 +9,5 @@ int main(){
 	 if (b>a&&b>c)
 	 max =b;
 	 else max = c;
-	printf("max la : %.2f", max);
+	printf("So lon nhat la : %.2f", max);
 }
