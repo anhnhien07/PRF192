@@ -4,11 +4,23 @@ int main(){
 	float tk;
 	char diem;
 	printf("Nhap diem chuyen can :");
-	scanf("%f",&d);
+	int kq = scanf("%f",&d);
+	if (kq!=1||d<=0) {
+		printf("Nhap sai!");
+		return 0; 
+	}
 	printf("Nhap diem giua ky :");
-	scanf("%f",&g);
+	kq = scanf("%f",&g);
+	if (kq!=1||g<=0) {
+		printf("Nhap sai!");
+		return 0; 
+	}
 	printf("Nhap diem cuoi ky :");
-	scanf("%f",&c);
+	kq = scanf("%f",&c);
+	if (kq!=1||c<=0) {
+		printf("Nhap sai!");
+		return 0; 
+	}
 	tk = 0.1*d + 0.3*g + 0.6*c;
 	if (tk>=8.5)
 	 diem = 'A';
