@@ -20,13 +20,12 @@ int main(){
 	diem = 'D';
 	else 
 	diem = 'F';
-	printf("Sinh vien loai %c\n",diem);
+	printf("Diem chu %c\n",diem);
 	if (d<4||g<4||c<4 && diem =='F')
 	{
 		printf("Khong du dieu kien tot nghiep!\n");
 	}
 	else 
 	printf("Du dieu kien tot nghiep!\n");
-
-	
+	return 0;
 }
