@@ -4,20 +4,9 @@ int main(){
 	float tk;
 	char diem;
 	printf("Nhap diem chuyen can :");
-	int kq = scanf("%f",&d);
-	if (kq!=1||d<=0) {
-		printf("Nhap sai!");
-		return 0; 
-	}
-	printf("Nhap diem giua ky :");
-	kq = scanf("%f",&g);
-	if (kq!=1||g<=0) {
-		printf("Nhap sai!");
-		return 0; 
-	}
-	printf("Nhap diem cuoi ky :");
-	kq = scanf("%f",&c);
-	if (kq!=1||c<=0) {
+	int kq = scanf("%f %f %f",&d,&g,&c);
+	printf("Kq nhap: %d\n",kq);
+	if (kq!=3||d<=0||g<=0||c<=0) {
 		printf("Nhap sai!");
 		return 0; 
 	}
@@ -32,6 +21,7 @@ int main(){
 	diem = 'D';
 	else 
 	diem = 'F';
+	printf("Diem so %.1f\n",tk);
 	printf("Diem chu %c\n",diem);
 	if (d<4||g<4||c<4 && diem =='F')
 	{
