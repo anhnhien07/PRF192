@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+
+int main() {
+  system("cls");
+  //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
+  float a,b,x,kq;
+  printf("\nINPUT:\n");
+  scanf("%f\n",&a);
+  scanf("%f",&b);
+  // Fixed Do not edit anything here.
+  printf("\nOUTPUT:\n");
+  //@STUDENT: WRITE YOUR OUTPUT HERE:
+  if (a==0){
+  	printf("Error: Division by zero");
+  }
+  else {
+  x = -b/a;
+  kq = cbrt(x);
+  printf("%.3f",kq);
+}
+ return 0;
+  //--FIXED PART - DO NOT EDIT ANY THINGS HERE
+  printf("\n");
+  system ("pause");
+  return(0);
+}

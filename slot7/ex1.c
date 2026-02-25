@@ -10,7 +10,9 @@ int main(){
 	return 0;
 }
 	switch(t){
-		case 1...3: 
+		case 1: 
+		case 2:
+		case 3:
 			quy = 1;
 			break;
 		case 4:

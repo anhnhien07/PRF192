@@ -21,12 +21,14 @@ int main() {
 		case '/':
 			if (b==0) {
 				printf("Khong the chia cho 0");
+				return 0;
 			}
 			kq = (float) a / b;
 			break;
 		case '%':
 			if (b==0) {
 				printf("Khong the chia cho 0");
+				return 0;
 			}
 			kq = a % b;
 			break;
@@ -37,4 +39,5 @@ int main() {
 		} else
 			printf("%d %c %d = %.0f",a,dau,b,kq);
 	}
+	return 0;b
 }
