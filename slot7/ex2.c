@@ -39,5 +39,5 @@ int main() {
 		} else
 			printf("%d %c %d = %.0f",a,dau,b,kq);
 	}
-	return 0;b
+	return 0;
 }
