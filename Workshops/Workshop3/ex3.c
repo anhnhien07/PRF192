@@ -1,21 +1,38 @@
 #include<stdio.h>
-int main(){
-	float n;
-	int kq;
-	int count=0;
-	do{
-	printf("Nhap vao n:");
-	do {
-	kq = scanf("%f",&n);
-	if (kq!=1||n<=0||n>1000){
-	printf("Nhap lai n:");
-	fflush(stdin);
+int overtime(float hours){
+	if (hours>40)
+	return 1;
+	else return 0;
+}
+float nhapRate(){
+	float soRate;
+	printf("Nhap so tien moi gio: ");
+	while(scanf("%f",&soRate)!=1||soRate<=0){
+		printf("Nhap sai! Nhap lai: ");
+		fflush(stdin);
 	}
+	return soRate;	
 }
-	while(kq!=1||n<=0||n>1000);
-	printf("Can bac 2 la: %.2f\n",sqrt(n));
-	count++;	
+float nhapGio(){
+	float soGio;
+	printf("Nhap so gio cong nhan lam: ");
+	while(scanf("%f",&soGio)!=1||soGio<=0){
+		printf("Nhap sai! Nhap lai: ");
+		fflush(stdin);
+	}
+	return soGio;	
 }
-	while (count<5);
-	printf("Da xong xuat sac");
+float calculate_salary(float hours, float rate){
+	float tien;
+	if (overtime( hours))
+	tien = rate*40 + 1.5*(hours-40)*rate;
+	else
+	tien = rate*hours;
+	return tien;
+}
+int main(){
+	float hours, rate;
+	rate = nhapRate();
+	hours = nhapGio();
+	printf("Luong cong nhan: %.0f",calculate_salary(hours,rate));
 }

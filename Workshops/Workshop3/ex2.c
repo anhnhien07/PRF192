@@ -1,14 +1,25 @@
 #include<stdio.h>
-int main() {
-	float n;
-	printf("Nhap vao n:");
-	do {
-	if (scanf("%f",&n)!=1||n<=0||n>1000){
-	printf("Nhap lai n:");
-	fflush(stdin);
-	} 
+int calculate_taxi_fare(float distance){
+	int tien=0;
+	if (distance<=1)
+		return 15000;
+	else if (distance<=30)
+	tien = 15000 + 12000*(distance-1);
+	else tien = 15000 + 12000*29 + (distance-30)*10000;
+	return tien;
+	}
+float nhapKm(){
+	float soKm;
+	printf("Nhap km di duoc: ");
+	while(scanf("%f",&soKm)!=1||soKm<=0){
+		printf("Nhap sai! Nhap lai: ");
+		fflush(stdin);
+	}
+	return soKm;	
 }
-	while (scanf("%f",&n)!=1||n<=0||n>1000);
-	printf("Can bac 2 la: %.2f",sqrt(n));
+int main(){
+	float distance;
+	distance = nhapKm();
+	printf("So tien cuoc Taxi: %d",calculate_taxi_fare( distance));
+}
 
-}
