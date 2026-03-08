@@ -12,7 +12,7 @@ int lonnhat(int a,int b, int c){
 }
 int nhapInt(){
 	int soInt;
-	printf("Nhap so: %d ", soInt);
+	printf("Nhap so: ",);
 	while(scanf("%d",&soInt)!=1||soInt<=0){
 		printf("Nhap sai! Nhap lai: ");
 		fflush(stdin);
